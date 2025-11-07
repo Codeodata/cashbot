@@ -1,0 +1,15 @@
+oauth2client==4.1.3
+# OpenAI
+openai==1.54.0
+
+# Google Sheets
+google-auth==2.35.0
+google-auth-oauthlib==1.2.1
+google-auth-httplib2==0.2.0
+gspread==6.1.3
+
+# Telegram (solo para enviar respuestas)
+requests==2.32.3
+
+# Utilidades
+python-dotenv==1.0.1
