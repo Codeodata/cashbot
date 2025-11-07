@@ -1,47 +1,36 @@
-# Archivos sensibles
-.env
-*.tfvars
-!*.tfvars.example
-google_sa.json
-ecr_url.txt
-lambda_url.txt
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-venv/
-env/
-ENV/
-.venv
-
-# Terraform
-.terraform/
-*.tfstate
-*.tfstate.*
-.terraform.lock.hcl
-crash.log
+# ─── Terraform ─────────────────────────────────────────────
+.terraform/                  # Configuración local de Terraform
+*.tfstate                    # Archivos de estado
+*.tfstate.*                  # Backups de estado
+.terraform.lock.hcl          # Lock de dependencias
+crash.log                    # Logs de errores de Terraform
 override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
+terraform/*.tfvars           # Variables sensibles
 
-# Docker
-*.log
+# Ignorar también cualquier tfvars global fuera de /terraform
+*.tfvars
 
-# IDE
+# ─── Docker ────────────────────────────────────────────────
+*.log                        # Logs generados por contenedores
+docker-compose.override.yml  # Overrides locales (opcional)
+
+# ─── IDE / Editor ──────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+*.code-workspace
 
-# OS
+# ─── Sistema operativo ─────────────────────────────────────
 .DS_Store
 Thumbs.db
 
-# AWS
+# ─── AWS / Credenciales ────────────────────────────────────
 aws-config.txt
 credentials.txt
+.aws/
+
